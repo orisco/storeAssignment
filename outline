@@ -1,0 +1,93 @@
+Built with:
+
+Node.js, Express.js, MongoDB, Angular, Sass
+
+// DB MODELS
+
+1. Product Schema 
+a. _id
+b. title 
+c. price (usd) 
+d. description 
+e. image (google url)
+
+2. Checkout/Cart Schema
+a. _id
+b. date
+c. product [{
+ productId
+}]
+d. total price - the sum of all products price
+   
+
+// SERVER ROUTES 
+
+routes: products, cart, stats
+
+1. PUT /products/:productId  // ADMIN ONLY
+a. editing product data 
+
+2. POST /products/add // ADMIN ONLY
+a. add a new product 
+
+3. GET /products/ ALL USERS
+a. get all available products
+
+4. POST /checkout/add // ALL USERS
+a. add a product to the cart
+
+5. GET /checkout/top
+Display the top 5 sold products
+
+5. GET /checkout/unique
+Display the top 5 Unique sold products.
+
+6. GET /checkout/gross
+Displaying the 5 best selling days
+
+
+// CLIENT ROUTES
+
+routes =  admin, home, stats
+
+1. /admin 
+a. get, post, put
+b. present data, buttons for editing, adding
+
+2. /home
+a. get, post (to Cart) 
+
+3. /stats 
+a. get 5 most popular
+b. get 5 most unique (least popular?)
+c. get sales
+
+
+// COMPONENTS
+
+1. Navigation
+2. Main
+      AdminProductTable
+        adminItems
+      Product
+        productItems
+        cart
+      Stats
+
+
+// SERVICE
+
+1. web request with URL (post, get, put)
+2. Product (add, post, edit products)
+3. Checkout (post, stats) 
+
+// INTERFACE
+
+1. Product: _id, title, price (usd), description, image (google url)
+2. Cart: id, product [{
+ productId: {
+   _id, title, price (usd), description, image (google url)
+ }
+}], total price 
+3. Checkout: _id, date, product[{product: {Product}}], total price
+
