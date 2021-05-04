@@ -2,12 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("./db/dbConfig.js");
 const path = require("path");
-
 const app = express();
 
 // MIDDLEWARE
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // ROUTES
 
