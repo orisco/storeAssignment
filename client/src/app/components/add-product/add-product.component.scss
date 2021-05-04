@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.addProductForm {
+  font-family: $paragraphFont;
+  @include rightSidePopUp;
+  @include centerFlex;
+  .closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    @include links;
+  }
+  .input {
+    @include centerFlex;
+    flex-direction: column !important;
+    label {
+      margin: 5px;
+    }
+  }
+  .bottom {
+    width: 100%;
+    height: 10%;
+    align-self: flex-end;
+    @include rowFlex(center);
+  }
+}

@@ -1,0 +1,14 @@
+<div class="stats-wrapper">
+  <div class="card">
+    <h1>Top 5 Products Sold</h1>
+    <app-stats-card *ngFor="let product of topFive" [product]="product"></app-stats-card>
+  </div>
+  <div class="card">
+    <h1>Top 5 Unique Products Sold</h1>
+    <app-stats-card *ngFor="let product of topUnique" [product]="product"></app-stats-card>
+  </div>
+  <div class="card">
+    <h1>Best Sale Days</h1>
+    <app-stats-card *ngFor="let sales of topSales" [sales]="sales"></app-stats-card>
+  </div>
+</div>

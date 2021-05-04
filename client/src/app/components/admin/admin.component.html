@@ -1,0 +1,16 @@
+<div class="adminRow">
+  <div class="title">
+    <p>{{product.title}}</p>
+  </div>
+  <div class="price">
+    <p>$ {{product.price}}</p>
+  </div>
+  <div class="buttons">
+    <p (click)="_product.toggleAdminEditProductBox(product)">edit</p>
+    <p (click)="deleteProduct(product._id)">delete</p>
+  </div>
+</div>
+
+<div *ngIf="_product.adminEditProductToggle">
+  <app-add-product></app-add-product>
+</div>

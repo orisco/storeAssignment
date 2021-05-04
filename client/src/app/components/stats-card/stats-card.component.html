@@ -1,0 +1,9 @@
+<div *ngIf="product && product.products[0]" class="products">
+  <p>{{product.products[0].title}}</p>
+  <p>{{product.amount}}</p>
+</div>
+
+<div *ngIf="sales" class="products">
+  <p>{{sales._id | date}}</p>
+  <p>{{sales.amount}}</p>
+</div>

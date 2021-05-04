@@ -1,0 +1,14 @@
+<div class="cart-wrapper">
+  <p class="closeCartBtn" (click)="_cart.cartDisplayButton = false"><i class="fas fa-times"></i></p>
+  <div class="products">
+    <p *ngIf="cartObject.length === 0">Cart is empty</p>
+    <div *ngFor="let product of cartObject" class="cartRow">
+      <p class="desc">{{product.quantity}} x {{product.title}}</p>
+      <p class="price">$ {{product.price}}</p>
+    </div>
+  </div>
+  <div class="totalPrice">
+    <p>Total: $ {{_cart.totalPrice}}</p>
+    <p *ngIf="cartObject.length > 0" (click)="_cart.sendCartToServer()" class="checkout">Checkout</p>
+  </div>
+  </div>

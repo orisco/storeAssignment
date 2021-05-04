@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.stats-wrapper {
+  padding: 50px;
+  @include centerFlex;
+}
+.card {
+  @include productCard;
+  flex-direction: column;
+  justify-content: flex-start;
+  h1 {
+    width: 70%;
+    text-align: center;
+    height: 120px;
+    border-bottom: 1px solid black;
+  }
+}

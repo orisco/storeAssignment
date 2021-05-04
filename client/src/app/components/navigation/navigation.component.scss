@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.navigation-wrapper {
+  font-family: $paragraphFont;
+  font-weight: 100;
+  font-size: 15px;
+  height: 100px;
+  width: 100%;
+  @include rowFlex(flex-start);
+  div {
+    margin: 20px;
+  }
+  .logo {
+    width: 25%;
+    font-family: $logoFont;
+    font-size: large;
+    @include links;
+  }
+  .links {
+    width: 20%;
+    @include rowFlex(flex-start);
+    p {
+      margin: 20px;
+      @include links;
+    }
+  }
+  .cart {
+    width: 50%;
+    @include rowFlex(flex-end);
+    p {
+      width: 100px;
+      text-align: center;
+      @include links;
+      font-size: 20px;
+    }
+  }
+  .active {
+    border-bottom: dodgerblue 1px solid;
+  }
+}

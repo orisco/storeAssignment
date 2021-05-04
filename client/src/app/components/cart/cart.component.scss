@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.cart-wrapper {
+  @include rightSidePopUp;
+  font-family: $paragraphFont;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+
+  .closeCartBtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    @include links;
+  }
+  .products {
+    height: 75%;
+    overflow: scroll;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .cartRow {
+    height: 50px;
+    width: 100%;
+    @include rowFlex(flex-start);
+    text-align: left;
+    .desc {
+      width: 75%;
+    }
+  }
+  .totalPrice {
+    @include centerFlex;
+    flex-direction: column;
+  }
+  .checkout {
+    @include links;
+  }
+}

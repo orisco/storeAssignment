@@ -1,0 +1,29 @@
+<form class="addProductForm" [formGroup]="form">
+  <p class="closeBtn" (click)="_product.closeBox()"><i class="fas fa-times"></i></p>
+  <div class="input">
+    <label>Product Title</label>
+    <input type="text" placeholder="Title" 
+    [value]="_product.editedProduct && _product.editedProduct.title"
+    formControlName="title">
+  </div>
+  <div class="input">
+    <label>Product Description</label>
+    <input type="text" placeholder="Description" 
+    [value]="_product.editedProduct && _product.editedProduct.description || ''" formControlName="description">
+  </div>
+  <div class="input">
+    <label>Product Price</label>
+    <input type="number" placeholder="price" 
+    [value]="_product.editedProduct && _product.editedProduct.price || ''" formControlName="price">
+  </div>
+  <div class="input">
+    <label>Product Image (URL)</label>
+    <input type="text" placeholder="image URL" 
+    [value]="_product.editedProduct && _product.editedProduct.image || ''" formControlName="image">
+  </div>
+  
+  <div class="bottom">
+    <button *ngIf="_product.adminAddProductToggle" (click)="addProduct()">Add product</button>
+    <button *ngIf="_product.adminEditProductToggle" (click)="editProduct()">Edit product</button>
+  </div>
+</form>
