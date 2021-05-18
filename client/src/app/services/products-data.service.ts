@@ -9,9 +9,9 @@ export class ProductsDataService {
   public allProducts: Product[] = [];
 
   // current page
-  public reports: boolean = false;
-  public admin: boolean = false;
-  public home: boolean = false;
+  // public reports: boolean = false;
+  // public admin: boolean = false;
+  // public home: boolean = false;
 
   //add product modal
   public adminAddProductToggle: boolean = false;

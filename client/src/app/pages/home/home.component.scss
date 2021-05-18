@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.main-wrapper {
+  @include fullScreen;
+}
+.products {
+  padding-top: 50px;
+  @include centerFlex;
+}
+// .editProductModal {
+//   @include rightSidePopUp;
+// }

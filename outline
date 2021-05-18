@@ -64,6 +64,17 @@ c. get sales
 
 
 // COMPONENTS
+1. cardItem
+2. cart
+3. cartItem
+4. adminRow
+5. statsItem
+6. addItem - vers.
+
+// PAGES 
+1. Home
+2. Admin
+3. Stats
 
 1. Navigation
 2. Main
